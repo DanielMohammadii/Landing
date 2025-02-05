@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Gateway</title>
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="logo">
+                <div class="logo-circle"></div>
+            </div>
+            
+            <h1>Free Psychic Reading</h1>
+            <div class="subtitle">Limited Time Offer!</div>
+            <div class="mystic-orb"></div>
+            
+            <div class="cta-section">
+                <p class="cta-text">Join our exclusive WhatsApp group now!</p>
+                <a href="#" class="whatsapp-button" id="whatsappButton">
+                    <img src="Wh.png" alt="WhatsApp">Claim Your Free Reading
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add floating animation to the mystic orb
+        const orb = document.querySelector('.mystic-orb');
+        let position = 0;
+        
+        function animate() {
+            position += 0.02;
+            orb.style.transform = `translateY(${Math.sin(position) * 10}px)`;
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    </script>
+</body>
+</html>
