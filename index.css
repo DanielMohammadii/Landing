@@ -209,17 +209,18 @@ p {
 
 @media (max-width: 768px) {
     body {
-        padding: 15px;
+        padding: 10px;
     }
 
     .container {
-        max-width: 90%;  /* instead of 100% */
-        padding: 1.2rem;
-        margin: 0.5rem auto;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0;
+        border-radius: 15px;
     }
 
     .content-wrapper {
-        gap: 0.8rem;  /* slightly reduced gap */
+        gap: 15px;
     }
 
     .logo {
@@ -228,16 +229,21 @@ p {
     }
 
     .mystic-orb {
-        width: 90px;  /* slightly smaller orb */
-        height: 90px;
+        width: 70px;
+        height: 70px;
+        margin: 15px auto;
     }
 
     h1 {
-        font-size: 32px;  /* reduced from 36px */
+        font-size: 24px;
+        margin: 10px 0;
+        padding: 0 10px;
     }
 
     .subtitle {
-        font-size: 20px;  /* reduced from 22px */
+        font-size: 18px;
+        margin: 15px 0;
+        padding: 0 10px;
     }
 
     p {
@@ -245,18 +251,34 @@ p {
     }
 
     .cta-text {
-        font-size: 15px;
-        margin: 15px 0;
+        font-size: 14px;
+        padding: 0 15px;
+        margin: 10px 0;
     }
 
     .launchlist-form {
-        max-width: 100%;
+        width: 90%;
+        gap: 10px;
     }
 
     .launchlist-form input,
     .launchlist-form button {
         font-size: 15px;
         padding: 10px 20px;
+    }
+
+    .launchlist-form input {
+        padding: 14px;
+        font-size: 16px;
+        margin: 0;
+        height: 45px;
+    }
+
+    .launchlist-form button {
+        height: 45px;
+        font-size: 16px;
+        padding: 0 20px;
+        margin-top: 5px;
     }
 
     .offer-text {
@@ -267,15 +289,15 @@ p {
 @media (max-width: 320px) {
     .container {
         max-width: 95%;
-        padding: 1rem;
+        padding: 12px;
     }
 
     h1 {
-        font-size: 1.4rem;
+        font-size: 20px;
     }
 
     .subtitle {
-        font-size: 0.9rem;
+        font-size: 16px;
     }
 
     .cta-text {
@@ -284,8 +306,8 @@ p {
 
     .launchlist-form input,
     .launchlist-form button {
+        height: 40px;
         font-size: 14px;
-        padding: 8px 16px;
     }
 
     .offer-text {
