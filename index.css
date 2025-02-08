@@ -406,7 +406,6 @@ p {
     }
 
     .launchlist-form input,
-.floating-sphere {
     .launchlist-form button {
         height: 45px;
         font-size: 16px;
@@ -433,6 +432,8 @@ p {
     }
 }
 
+/* Fix the floating sphere styles by moving them outside of media query */
+.floating-sphere {
     position: fixed;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--electric-violet), var(--deep-red));
