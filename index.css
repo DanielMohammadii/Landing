@@ -50,7 +50,7 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.2rem;  /* reduced from 0.5rem */
 }
 
 .logo {
@@ -86,8 +86,11 @@ body::before {
 .form-wrapper {
     width: 100%;
     max-width: 400px;
-    margin: 1rem auto;
-    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .launchlist-form {
@@ -145,18 +148,36 @@ launchlist-form input:focus {
 
 .cta-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;  /* reduced from 20px */
-    font-weight: 500;
-    color: #00E5FF;
-    margin: 20px 0;  /* reduced from 30px */
-    text-shadow: 2px 2px 10px rgba(0, 229, 255, 0.4);
-    letter-spacing: 0.5px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 -15px 0;  /* negative margin to pull form up */
+    padding: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.2px;
 }
 
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 20px var(--mystic-red); }
+    50% { box-shadow: 0 0 40px var(--electric-violet); }
+    100% { box-shadow: 0 0 20px var(--mystic-red); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .social-links a {
@@ -179,23 +200,27 @@ social-links a:hover {
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 36px;  /* reduced from 42px */
+    font-size: 32px;
     font-weight: 700;
-    margin: 0.3rem 0;
-    color: #FFD700;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.5);
-    letter-spacing: 1px;
-    line-height: 1.2;
+    margin: 0 0 25px;
+    color: white;
+    text-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+    letter-spacing: 0.3px;
+    line-height: 1.3;
+    padding: 0 15px;
+    max-width: 100%;
+    animation: float 7s ease-in-out infinite;
 }
 
 .subtitle {
     font-family: 'Montserrat', sans-serif;
-    font-size: 22px;  /* reduced from 26px */
+    font-size: 18px;
     font-weight: 600;
     color: #00E5FF;
     text-shadow: 2px 2px 10px rgba(0, 229, 255, 0.5);
-    margin: 30px 0;
+    margin: 5px 0 20px;
     letter-spacing: 0.5px;
+    line-height: 1.4;
 }
 
 p {
@@ -209,20 +234,53 @@ p {
 }
 
 .cta-section {
-    margin-top: 1.5rem;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0;
 }
 
 .offer-text {
-    color: var(--teal);
-    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0.5rem auto 1.5rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.2px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.offer-item {
+    margin-bottom: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.offer-item:hover {
+    transform: translateY(-5px);
+}
+
+.offer-item h3 {
+    color: #ffffff;  /* changed from var(--teal) to white */
+    font-size: 20px;  /* increased from 18px */
     font-weight: 600;
-    margin: 0.5rem 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.5px;
+    margin-bottom: 6px;  /* reduced from 8px */
+}
+
+.offer-item p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;  /* reduced from 15px */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1.4;  /* slightly reduced from 1.5 */
 }
 
 @media (max-width: 768px) {
@@ -253,15 +311,14 @@ p {
     }
 
     h1 {
-        font-size: 24px;
-        margin: 10px 0;
+        font-size: 26px;
         padding: 0 10px;
+        text-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
     }
 
     .subtitle {
-        font-size: 18px;
-        margin: 15px 0;
-        padding: 0 10px;
+        font-size: 16px;
+        margin: 3px 0 20px;
     }
 
     p {
@@ -269,9 +326,8 @@ p {
     }
 
     .cta-text {
-        font-size: 14px;
-        padding: 0 15px;
-        margin: 10px 0;
+        font-size: 16px;
+        margin: 5px 0;
     }
 
     .launchlist-form {
@@ -301,7 +357,20 @@ p {
     }
 
     .offer-text {
-        font-size: 1rem;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .offer-text li {
+        margin-bottom: 6px;
+    }
+
+    .offer-item h3 {
+        font-size: 18px;  /* adjusted for mobile */
+    }
+
+    .offer-item p {
+        font-size: 13px;  /* adjusted for mobile */
     }
 
     .form-container {
@@ -321,11 +390,15 @@ p {
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 22px;
+        margin: 0 0 20px;
+        padding: 0 8px;
+        max-width: 98%;
     }
 
     .subtitle {
-        font-size: 16px;
+        font-size: 14px;
+        margin: 2px 0 15px;
     }
 
     .cta-text {
@@ -333,6 +406,7 @@ p {
     }
 
     .launchlist-form input,
+.floating-sphere {
     .launchlist-form button {
         height: 45px;
         font-size: 16px;
@@ -342,6 +416,14 @@ p {
         font-size: 0.9rem;
     }
 
+    .offer-item h3 {
+        font-size: 14px;
+    }
+
+    .offer-item p {
+        font-size: 12px;
+    }
+
     .form-container {
         padding: 0 5px;
     }
@@ -349,4 +431,36 @@ p {
     .form-wrapper {
         padding: 0 5px;
     }
+}
+
+    position: fixed;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--electric-violet), var(--deep-red));
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.sphere1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.sphere2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: -50px;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+.sphere3 {
+    width: 150px;
+    height: 150px;
+    bottom: -50px;
+    left: 50%;
+    animation: float 7s ease-in-out infinite;
 }

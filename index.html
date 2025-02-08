@@ -6,46 +6,49 @@
     <meta name="theme-color" content="#4B0082">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Merkify - Spiritual Gateway</title>
+    <title>Merkify - Best Psychic Experts</title>
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://getlaunchlist.com/js/widget.js" defer></script>
 </head>
 <body>
+    <div class="floating-sphere sphere1"></div>
+    <div class="floating-sphere sphere2"></div>
+    <div class="floating-sphere sphere3"></div>
+    
     <div class="container">
         <div class="content-wrapper">
             <div class="logo">
                 <div class="logo-circle"></div>
             </div>
             
-            <h1>Unlock Your Free Psychic Reading with Merkify!</h1>
-            <div class="subtitle">🔮 For a Limited Time Only – Don't Miss Out!</div>
+            <h1>Best Psychic Experts for Guidance on Merkify!</h1>
             
+            <p class="cta-text">By joining our waiting list, you get:</p>
             <div class="form-wrapper">
                 <div class="launchlist-widget" data-key-id="kuxeHZ" data-height="200px"></div>
             </div>
 
-            <div class="mystic-orb"></div>
-            
             <div class="cta-section">
-                <p class="cta-text">🔮 Receive Your Personalized Spiritual Insights!</p>
+                <div class="offer-text">
+                    <div class="offer-item">
+                        <h3>Mystery Box:</h3>
+                        <p>Unleash your inner psychic with exclusive goodies.</p>
+                    </div>
+                    <div class="offer-item">
+                        <h3>Early Access:</h3>
+                        <p>Gain first access to Merkfiy cryptocurrency.</p>
+                    </div>
+                    <div class="offer-item">
+                        <h3>Golden Ticket:</h3>
+                        <p>Enjoy free entry to our London psychic event.</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="mystic-orb"></div>
         </div>
     </div>
-
-    <script>
-        // Add floating animation to the mystic orb
-        const orb = document.querySelector('.mystic-orb');
-        let position = 0;
-        
-        function animate() {
-            position += 0.02;
-            orb.style.transform = `translateY(${Math.sin(position) * 10}px)`;
-            requestAnimationFrame(animate);
-        }
-        
-        animate();
-    </script>
 </body>
 </html>
